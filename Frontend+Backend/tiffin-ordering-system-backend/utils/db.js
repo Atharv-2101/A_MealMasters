@@ -15,7 +15,8 @@
 
 const path = require('path');
 // This forces Node to look in the exact folder where server.js and .env live
-require('dotenv').config({ path: path.join(__dirname, '../.env') });
+// require('dotenv').config({ path: path.join(__dirname, '../.env') });
+require('dotenv').config();
 
 console.log("--- DB DEBUG ---");
 console.log("Target Host:", process.env.DB_HOST); 
