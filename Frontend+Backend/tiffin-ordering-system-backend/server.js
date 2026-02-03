@@ -42,7 +42,7 @@
 //   console.log('Server running on port 4000')
 // })
 
-
+require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
 const PORT = process.env.PORT || 5000;
