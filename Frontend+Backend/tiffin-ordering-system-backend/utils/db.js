@@ -14,10 +14,12 @@
 
 
 const path = require('path');
-// This tells dotenv exactly where the file is relative to this script
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+// This forces Node to look in the exact folder where server.js and .env live
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
-console.log("Connecting to host:", process.env.DB_HOST);
+console.log("--- DB DEBUG ---");
+console.log("Target Host:", process.env.DB_HOST); 
+console.log("----------------");
 
 const mysql = require('mysql');
 const pool = mysql.createPool({
@@ -27,5 +29,7 @@ const pool = mysql.createPool({
     database: process.env.DB_NAME,
     port: process.env.DB_PORT || 3306
 });
+
+module.exports = pool;
 
 module.exports = pool;

@@ -74,5 +74,5 @@ app.use('/vendor', vendorRouter)
 app.use('/subscription', subscriptionRouter)
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log('Server running on port 4000')
+  console.log('Server running on port ', PORT)
 })
