@@ -45,6 +45,8 @@
 
 const express = require('express')
 const cors = require('cors')
+const PORT = process.env.PORT || 5000;
+
 
 const authorizeUser = require('./authorization/authuser')
 const userRouter = require('./routes/user')
@@ -71,6 +73,6 @@ app.use('/admin', adminRouter)
 app.use('/vendor', vendorRouter)
 app.use('/subscription', subscriptionRouter)
 
-app.listen(4000, '0.0.0.0', () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log('Server running on port 4000')
 })
