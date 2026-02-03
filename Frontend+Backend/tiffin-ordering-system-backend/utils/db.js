@@ -22,7 +22,7 @@ console.log("--- DB DEBUG ---");
 console.log("Target Host:", process.env.DB_HOST); 
 console.log("----------------");
 
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
