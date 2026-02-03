@@ -22,8 +22,8 @@ app.use('/profile_images', express.static('uploads/profile_images'));
 
 /* ================= PUBLIC ROUTES (NO TOKEN) ================= */
 
-app.use('/user', userRouter)        // login, signup
 app.use(authorizeUser)
+app.use('/user', userRouter)        // login, signup
 app.use('/customer', customerRouter) // customer/signup
 
 /* ================= PROTECTED ROUTES (TOKEN REQUIRED) ================= */
